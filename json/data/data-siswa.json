@@ -1,0 +1,32 @@
+[
+  {
+    "nama":"Rizal Fauzi",
+    "umur":18,
+    "nik":"17103033",
+    "hobi":["Coding","Ngedit","Rebahan"],
+    "guru":{
+      "guru1":"Efrida",
+      "guru2":"Nur"
+    }
+  },
+  {
+    "nama":"Salsa Carenea",
+    "umur":18,
+    "nik":"17103025",
+    "hobi":["Gambar","Ngedit","Rebahan"],
+    "guru":{
+      "guru1":"Efrida",
+      "guru2":"Nur"
+    }
+  },
+  {
+    "nama":"Raden Muhammad Rivananda",
+    "umur":18,
+    "nik":"17103033",
+    "hobi":["Jaringan","Ngedit","Jalan-Jalan"],
+    "guru":{
+      "guru1":"Dwi Puspita",
+      "guru2":"Nur"
+    }
+  }
+]
