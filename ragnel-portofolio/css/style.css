@@ -1,0 +1,262 @@
+html{
+	position: relative;
+	scroll-behavior: smooth;
+}
+
+
+body{
+	margin-bottom: 150px;
+}
+
+.nav{
+	justify-content: center;
+}
+
+.jumbotron{
+	background-image: url('../img/jumbotron.png');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 0 -100px;
+	color: #eaeaea;
+	overflow: hidden;
+}
+
+/* .portfolio .img-thumbnail{
+	opacity: 0;
+	transform: translate(0,-40px);
+	transition: .5s;
+}
+
+.portfolio .img-thumbnail.muncul{
+	opacity: 1;
+	transform: translate(0,0);
+} */
+
+.jumbotron h1,
+.jumbotron p{
+	text-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+
+.jumbotron img{
+	width: 200px;
+	border: 5px solid #eaeaea;
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
+ hr{
+	width: 250px;
+	border-top: 4px solid #999;
+}
+
+section{
+	min-height: 600px;
+}
+
+.portfolio{
+	background-color: #eee;
+}
+
+/* .portfolio .thumbnail{
+	opacity: 0;
+	transition: 1s;
+	transform: translate(0,-40px);
+}
+
+.portfolio .thumbnail.muncul{
+	opacity: 1;
+	transform: translate(0,0);
+}
+ */
+.margin{
+	margin-top: 20px;
+}
+
+.contact{
+	min-height: 800px;
+}
+
+footer{
+	width: 100%;
+	height: 150px;
+	position: absolute;
+	bottom: 0;
+	background-color: #333;
+	padding-top: 30px;
+}
+
+footer p{
+	color: #aaa;
+	font-size: 0.9em;
+
+}
+
+.kiri,
+.kanan{
+	opacity: 0;
+	transform: translate(-50px,0) rotate(15deg);
+	transition: 1s;
+}
+
+.kanan{
+	transform: translate(50px,0) rotate(-15deg);
+}
+
+.kiri.muncul, .kanan.muncul{
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+/* #portfolio,
+#about,
+#contact{
+	-webkit-transition: all 1s ease-in-out;
+	   -moz-transition: all 1s ease-in-out;
+	    -ms-transition: all 1s ease-in-out;
+	     -o-transition: all 1s ease-in-out;
+	        transition: all 1s ease-in-out;
+}
+
+section#about:target{
+	margin-top: 100px;
+}
+
+section#portfolio:target,
+section#about:target,
+section#contact:target{
+	margin-top: 100px;
+}
+ */
+.overlay{
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 100;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	transition: 1s;
+	padding: 100px 0;
+	text-align: center;
+}
+
+.overlay:target{
+	bottom: 0;
+	right: 0;
+	width: auto;
+	height: auto;
+	background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.overlay img{
+	max-height: 100%;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+	background-size: cover;
+}
+
+.overlay:target img{
+	animation: fade 1s;
+}
+
+.overlay .close{
+	color: white;
+	opacity: 0;
+	transition: .4s;
+}
+
+.overlay .responsive{ 
+	position: absolute;
+	top: 55px;
+	left: 50%;
+	display: flex;
+	justify-content: center;
+	flex: 1;
+}
+
+.close:hover{
+	color: darkred;
+}
+
+.overlay:target .close{
+	animation: slidedown 1s forwards;
+}
+
+a.next i,
+a.prev i{
+	transform: scale(10);
+	display: flex;
+	justify-content: space-between;
+	flex: 1;
+	position: absolute;
+	top: 45%;
+	left: 87%;
+	opacity: 0;
+}
+
+a.prev i{
+	margin-left: -50px;
+	left: 16%;
+}
+
+.overlay:target .next i,
+.overlay:target .prev i{
+	animation: fade 1s .5s forwards;
+}
+
+
+
+
+.img-thumbnail:hover{
+	transform: scale(1.1);
+	filter: brightness(150%);
+}
+
+.ig-thumbnail{
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.ig-thumbnail::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.ig-thumbnail img{
+	width: 100px;
+}
+
+/* animasi */
+
+@keyframes fade{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes zoomdanfade{
+	0%{
+		transform: scale(0, 0);
+		opacity: 0;
+	}
+	100%{
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes slidedown{
+	0%{
+		opacity: 0;
+		margin-top: -20px;
+	}
+	100%{
+		opacity: 1;
+		margin-top: 10px;
+	}
+}
